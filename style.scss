@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
+html {
+    font-size: 100%;
+}
+body {
+    color: #2a2a2a;
+    font-family: 'Oswald', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+h2 {
+    font-size: 35px;
+}
+p {
+    font-size: 20px;
+}
+li {
+    list-style: none;
+}
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+.logo {
+    & img {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+    }
+}
+header {
+    background: url(img/clothingstore.png) center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    & .top-text {
+        position: absolute;
+        font-size: 100px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+    }
+}   
+
+.read-button {
+    padding: 15px 30px;
+    margin-top: 30px;
+    font-size: 18px;
+    font-family: 'Oswald', sans-serif;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #000;
+    outline: none;
+    transition: all 0.3s;
+    &:hover {
+        background-color: #000;
+        color: #fff;
+    }
+}
+#gender {
+    & .text {
+        width: 100%;
+        text-align: center;
+        margin: 100px auto 70px;
+    }
+    & .contents-flex {
+        display: flex;
+        justify-content: space-between;
+        & .contents {
+            width: 48%;
+            position: relative;
+            transition: all 0.4s;
+            &:hover {
+                opacity: 0.8;
+                transform: scale(1.05);
+            }
+            & img {
+                width: 100%;
+            }
+            & .contents-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: rgba(0,0,0,0.5);
+                color: #fff;
+                text-align: center;
+                padding: 10px 30px;
+            }
+        }
+    }
+}
+
+#sale {
+    background: linear-gradient(-45deg, #020642, #67a1e2);
+	background-size: 400%;
+	animation: gradient 8s ease infinite;
+    color: #fff;
+    height: 390px;
+    margin: 100px 0;
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    
+    & img {
+        width: 100%;
+    }
+    & .sale-text {
+        text-align: center;
+        padding: 3%;
+        & h2 {
+            font-size: 42px;
+            margin-top: 20px;
+        }
+    }
+}
+
+.message {
+    background-color: rgb(240, 240, 240);
+    & .message-contents {
+        display: flex;
+        justify-content: space-between;
+        & .message-image {
+            width: 48%;
+            margin: 6% 0;
+            img {
+                width: 100%;
+            }   
+        }
+       & .message-text {
+           width: 48%;
+           margin: 10% 0;
+           text-align: center;
+           padding-top: 3%;
+           & p {
+               margin-top: 5%;
+           }
+       }
+    }
+}
+
+#footer {
+    background-color: #000;
+    & .footer {
+        padding: 3% 25% 0;
+        display: flex;
+        color: #fff;
+        justify-content: space-between;
+        & .footer-list {
+            & ul {
+                padding: 0;
+            }
+            & li {
+                color: #fff;
+                margin-bottom: 5px;
+            }
+        }
+        & .sns {
+            & ul {
+                display: flex;
+                padding: 0;
+                & li {
+                    margin: 0 10px;
+                    font-size: 30px;
+                    transition: all 0.4s;
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                    & a {
+                        color: #fff;
+                        
+                    }
+                }
+            }
+        }
+    }
+    & .copyright {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0 5px;
+        color: #747474;
+        & p {
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width:900px) {
+    header {
+        & .top-text {
+            font-size: 50px;
+        }
+    }
+    #gender {
+        & .contents-flex {
+            flex-direction: column;
+            & .contents {
+                width: 100%;
+                & :nth-child(1) {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+    #sale {
+        & .sale-text {
+            width: 90%;
+        }
+    }
+    .message {
+        .message-contents {
+            flex-direction: column;
+            & .message-image {
+                width: 100%;
+            }
+            & .message-text {
+                width: 100%;
+            }
+        }
+    }
+    #footer {
+        .footer {
+            padding: 5%;
+            flex-wrap: wrap;
+            & .footer-list{
+                width: 50%;
+            }
+            & .sns {
+               
+                }
+            }
+        }
+    }
